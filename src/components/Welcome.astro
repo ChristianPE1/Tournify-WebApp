@@ -1,16 +1,29 @@
 ---
-import { Image } from 'astro:assets';
-import NavBar from '../components/NavBar.astro';
-import Games from './Games.astro';
+import { Image } from "astro:assets";
+import NavBar from "../components/NavBar.astro";
+import Games from "./Games.astro";
+import Rankings from './Rankings.astro';
 ---
 
-<div class="relative w-full" >
-	<NavBar />
-	<img src="./hero-section.jpg" alt="" class="absolute inset-0 object-cover w-full h-full z-10" />
-	<section class="absolute flex flex-col items-center justify-center h-screen bg-cover bg-center w-full  text-white z-20" >
-		<h1 class="text-8xl font-bold">Tournify</h1>
-		<p class="text-2xl">Organiza tu primer torneo e-sport</p>
-	</section>
-	<p>test</p>
-	<Games />
+<div class="w-full relative min-h-screen bg-slate-900 overflow-hidden">
+
+		<div class="absolute inset-0  ">
+			<img
+				src="./hero-section.jpg"
+				alt=""
+				class="object-cover w-full h-screen"
+			/>
+		</div>
+
+		<section
+			class="relative flex flex-col items-center justify-center h-screen bg-cover bg-center w-full text-white gap-y-10 "
+		>
+			<h1 class="text-8xl font-bold">Tournify</h1>
+			<p class="text-2xl">Organiza tu primer torneo e-sport</p>
+		</section>
+
+		<Games />
+
+		<Rankings />
+
 </div>

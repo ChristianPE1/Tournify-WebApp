@@ -1,12 +1,81 @@
-<section class=" px-4 py-8 h-screen" >
-    <h2 class="text-4xl font-bold">Juegos</h2>
-    <p class="text-lg">Explora nuestra selección de juegos e-sport.</p>
-    <main class="flex flex-wrap gap-4 mt-4">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
-        <img src="./games/dota2-card.jpg" alt="" class="w-64 h-64 object-cover rounded-lg shadow-lg">
+<section
+    class="relative px-4 py-8 h-[1100px] flex flex-col items-center justify-center"
+>
+    <h2 class="text-6xl text-pink-500 font-bold mb-4">Juegos</h2>
+    <p class="text-lg mb-6 text-white">
+        Nuestro servicio cuenta con plantillas personalizadas para los
+        siguientes juegos.
+    </p>
+    <main class="flex flex-wrap gap-4 justify-center">
+        <div class="relative group w-56 h-96">
+            <img
+                src="/games/dota2-card.jpg"
+                alt="Dota 2"
+                class="w-56 h-96 object-cover rounded-lg shadow-lg"
+            />
+            <a
+                class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                style="pointer-events: auto;"
+                href="/tournaments/create/dota2"
+            >
+                Crear Torneo
+            </a>
+        </div>
+
+        <div class="relative group w-56 h-96">
+            <img
+                src="/games/fortnite-card.jpg"
+                alt="Fortnite"
+                class="w-56 h-96 object-cover rounded-lg shadow-lg"
+            />
+            <a
+                class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                style="pointer-events: auto;"
+                href="/tournaments/create/fortnite"
+            >
+                Crear Torneo
+            </a>
+        </div>
+        <div class="relative group w-56 h-96">
+            <img
+                src="/games/rocket-card.jpg"
+                alt="Rocket League"
+                class="w-56 h-96 object-cover rounded-lg shadow-lg"
+            />
+            <a
+                class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                style="pointer-events: auto;"
+                href="/tournaments/create/rocket-league"
+            >
+                Crear Torneo
+            </a>
+        </div>
+        <div class="relative group w-56 h-96">
+            <img
+                src="/games/sparking-card.jpg"
+                alt="DB Sparking"
+                class="w-56 h-96 object-cover rounded-lg shadow-lg"
+            />
+            <a
+                class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                style="pointer-events: auto;"
+                href="/tournaments/create/db-sparking"
+            >
+                Crear Torneo
+            </a>
+        </div>
+        <div class="relative group w-56 h-96">
+            <div
+                class="w-56 h-96 bg-slate-800 rounded-lg shadow-lg flex items-center justify-center text-center"
+            >
+                <a
+                    class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                    style="pointer-events: auto;"
+                    href="/tournaments/create/db-sparking"
+                >
+                    Explora más juegos
+                </a>
+            </div>
+        </div>
     </main>
 </section>

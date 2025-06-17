@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const games = [
+   {
+      name: "Dota 2",
+      image: "/games/dota2-card.jpg",
+      link: "/games/dota2",
+   },
+   {
+      name: "Fortnite",
+      image: "/games/fortnite-card.jpg",
+      link: "/games/fortnite",
+   },
+   {
+      name: "Rocket League",
+      image: "/games/rocket-card.jpg",
+      link: "/games/rocket-league",
+   },
+   {
+      name: "DB Sparking",
+      image: "/games/sparking-card.jpg",
+      link: "/games/db-sparking",
+   },
+   {
+      name: "Valorant",
+      image: "/games/valorant-card.jpg",
+      link: "/games/valorant",
+   },
+   {
+      name: "League of Legends",
+      image: "/games/lol-card.jpg",
+      link: "/games/lol",
+   },
+   {
+      name: "Call of Duty",
+      image: "/games/cod-card.jpg",
+      link: "/games/cod",
+   },
+   {
+      name: "Apex Legends",
+      image: "/games/apex-card.jpg",
+      link: "/games/apex-legends",
+   },
+   {
+      name: "Counter-Strike",
+      image: "/games/cs-card.jpg",
+      link: "/games/counter-strike",
+   },
+   {
+      name: "Overwatch",
+      image: "/games/overwatch-card.jpg",
+      link: "/games/overwatch",
+   },
+];
+---
+
+<Layout>
+   <div>
+      <header class="flex flex-col gap-8 text-center my-16 text-white">
+         <h1 class="text-8xl font-bold text-pink-500">Juegos</h1>
+         <h2 class="text-2xl">Explora toda nuestra biblioteca de plantillas</h2>
+      </header>
+      <section class="flex flex-wrap justify-center gap-8 px-4">
+         {
+            games.map((game) => (
+               <div class="relative group w-56 h-96">
+                  <img
+                     src={game.image}
+                     alt={game.name}
+                     onerror="this.onerror=null;this.src='/games/default-card.jpg'"
+                     class="w-full h-full object-cover rounded-lg shadow-lg"
+                  />
+                  <a
+                     class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                     style="pointer-events: auto;"
+                     href={game.link}
+                  >
+                     Crear Torneo
+                  </a>
+               </div>
+            ))
+         }
+      </section>
+   </div>
+</Layout>

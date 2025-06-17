@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import NavBar from "../components/NavBar.astro";
-import Games from "./Games.astro";
+import GamesCards from "./GamesGroup.astro";
 import Rankings from './Rankings.astro';
 ---
 
-<div class="w-full relative min-h-screen bg-slate-900 overflow-hidden">
+<div class="w-full relative min-h-screen  overflow-hidden">
 
 		<div class="absolute inset-0  ">
 			<img
@@ -22,7 +22,7 @@ import Rankings from './Rankings.astro';
 			<p class="text-2xl">Organiza tu primer torneo e-sport</p>
 		</section>
 
-		<Games />
+		<GamesCards />
 
 		<Rankings />
 

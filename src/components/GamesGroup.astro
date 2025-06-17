@@ -1,3 +1,29 @@
+---
+import GameCard from "./GameCard.astro";
+
+const gamesGroup = [
+    {
+        name: "Dota 2",
+        image: "/games/dota2-card.jpg",
+        link: "/tournaments/create/dota2",
+    },
+    {
+        name: "Fortnite",
+        image: "/games/fortnite-card.jpg",
+        link: "/tournaments/create/fortnite",
+    },
+    {
+        name: "Rocket League",
+        image: "/games/rocket-card.jpg",
+        link: "/tournaments/create/rocket-league",
+    },
+    {
+        name: "DB Sparking",
+        image: "/games/sparking-card.jpg",
+        link: "/tournaments/create/db-sparking",
+    },
+];
+---
 <section
     class="relative px-4 py-8 h-[1100px] flex flex-col items-center justify-center"
 >
@@ -7,7 +33,7 @@
         siguientes juegos.
     </p>
     <main class="flex flex-wrap gap-4 justify-center">
-        <div class="relative group w-56 h-96">
+        <!-- <div class="relative group w-56 h-96">
             <img
                 src="/games/dota2-card.jpg"
                 alt="Dota 2"
@@ -76,6 +102,13 @@
                     Explora más juegos
                 </a>
             </div>
-        </div>
+        </div>-->
+        {gamesGroup.map((game) => (
+            <GameCard
+                src={game.image}
+                alt={game.name}
+                link={game.link}
+            />
+        ))}
     </main>
 </section>

@@ -1,3 +1,21 @@
-<div>
-   <h1>Torneo de Fortnite</h1>
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+<div class="relative flex min-h-screen items-center justify-center text-white">
+   <img src="/bg/fortnite-back.webp" alt="Background Fortnite" class="absolute inset-0 object-cover w-full h-full">
+   <section class="relative h-[800px] w-[900px] rounded-4xl bg-cyan-950/90  flex flex-col gap-y-5 items-center justify-center">
+      <img src="/logos/lol-icon.webp" alt="Fortnite Logo" class="h-48 w-48 top-0">
+      <h1 class=" text-6xl text-pink-500 font-bold">Crea tu torneo</h1>
+      <h2 class="text-4xl text-white font-bold">Plantillas predefinidas</h2>
+      <hr>
+      <ul class="flex flex-col w-3/4 gap-4 text-center">
+         <li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2"><a href="#">Plantilla 1</a></li>
+         <li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2"><a href="#">Plantilla 2</a></li>
+         <li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2"><a href="#">Plantilla 3</a></li>
+         <li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2"><a href="#">Plantilla 4</a></li>
+      </ul>
+   </section>
 </div>
+</Layout>

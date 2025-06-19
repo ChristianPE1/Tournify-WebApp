@@ -8,70 +8,90 @@ const myTournaments = [
         name: "Torneo de Dota 2",
         date: "2023-11-01",
         status: "Activo",
-        img : "/games/dota2-card.jpg"
+        img: "/games/dota2-card.jpg",
+        colorGradient: "from-slate-800 via-red-800 to-slate-900",
     },
     {
         id: 2,
         name: "Campeonato de Fortnite",
         date: "2023-12-15",
         status: "Próximo",
-        img : "/games/fortnite-card.jpg"
+        img: "/games/fortnite-card.jpg",
+        colorGradient: "from-purple-950 to-blue-950",
     },
     {
         id: 3,
         name: "Liga de Rocket League",
         date: "2024-01-10",
         status: "Finalizado",
-        img : "/games/rocket-card.jpg"
-    }
+        img: "/games/rocket-card.jpg",
+        colorGradient: "from-blue-950 to-indigo-950",
+    },
 ];
-
 ---
 
 <Layout>
-   <div class="flex flex-col justify-center items-center mt-16">
-       <h1 class="flex text-8xl font-bold text-pink-500  ">Mis Torneos</h1>
-       <section class="flex flex-row items-center justify-center my-8 gap-16 flex-wrap">
-            {myTournaments.map(tournament => (
-                <div class="relative flex flex-col items-center  justify-center bg-green-400/30 rounded-lg overflow-hidden shadow-lg w-[400px] h-[800px]">
-                    <div class="w-full h-1/2 flex items-center justify-center   ">
-                    <img src={tournament.img} alt={tournament.name} class="max-h-96 object-cover rounded-lg shadow-lg mb-4" />
+    <div class="flex flex-col items-center mt-20 px-4">
+        {/* Título Principal */}
+        <h1
+            class="text-5xl md:text-6xl font-extrabold text-pink-500 text-center mb-12"
+        >
+            🎮 Mis Torneos
+        </h1>
+
+        {/* Grid de Tarjetas */}
+        <section
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl"
+        >
+            {
+                myTournaments.map((tournament) => (
+                    <div
+                        class={`group relative flex flex-col justify-between w-full h-[450px] rounded-3xl p-6 bg-gradient-to-br from-blue-950 to-indigo-950 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out`}
+                    >
+                        {/* Imagen del torneo */}
+                        <div class="w-full h-[40%] rounded-2xl overflow-hidden bg-black bg-opacity-10 flex justify-center items-center">
+                            <img
+                                src={tournament.img}
+                                alt={tournament.name}
+                                class="object-contain max-h-52 transition-transform duration-500 group-hover:scale-105"
+                            />
+                        </div>
+
+                        {/* Información del torneo */}
+                        <main class="flex flex-col justify-between h-[60%] text-white mt-6">
+                            <div class="text-center">
+                                <h2 class="text-3xl font-extrabold mb-2 tracking-wide">
+                                    {tournament.name}
+                                </h2>
+                                <p class="text-lg font-medium text-gray-100 mb-4">
+                                    🗓️ Fecha:{" "}
+                                    <span class="font-semibold text-white">
+                                        {tournament.date}
+                                    </span>
+                                </p>
+                            </div>
+
+                            {/* Estado del torneo */}
+                            <div class="flex justify-center mt-auto">
+                                <span
+                                    class={`px-6 py-2 rounded-full text-md font-bold tracking-wide shadow-md
+                                        ${
+                                            tournament.status === "Activo"
+                                                ? "bg-green-500"
+                                                : tournament.status ===
+                                                    "Próximo"
+                                                  ? "bg-yellow-400 text-black"
+                                                  : "bg-red-500"
+                                        }
+                                    `}
+                                >
+                                    {tournament.status}
+                                </span>
+                            </div>
+                        </main>
                     </div>
-                    <main class="px-6 flex flex-col justify-center relative text-white text-center mt-auto bg-red-600 w-full h-1/2 bottom-0 rounded-b-lg">
-                        <h2 class="text-4xl font-bold">{tournament.name}</h2>
-                        <p class="text-lg">Fecha: {tournament.date}</p> 
-                        <p
-                            class={`text-lg px-8 py-2 rounded-full font-semibold
-                                ${
-                                    tournament.status === "Activo"
-                                        ? "bg-green-500"
-                                        : tournament.status === "Próximo"
-                                        ? "bg-yellow-400"
-                                        : "bg-red-500"
-                                }
-                                text-white`}
-                        >
-                            {tournament.status}
-                        </p>
-                    </main>
-                </div>
-            ))}
-            <!--
-               <div class="relative group w-56 h-96">
-   <img
-      src={src}
-      alt={alt}
-      class="w-56 h-96 object-cover rounded-lg shadow-lg"
-   />
-   <a
-      class="absolute inset-0 flex items-center justify-center bg-slate-950/80 text-white text-xl font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
-      style="pointer-events: auto;"
-      href={link}
-   >
-      Crear Torneo
-   </a>
-</div>
-               -->
-       </section>
-   </div>
+                ))
+            }
+        </section>
+    </div>
 </Layout>

@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// No necesitas props para esta versión, pero puedes convertirlo en componente dinámico si lo deseas.
+---
+<Layout>
+   <section class=" text-white py-16 px-4">
+      <div class="  text-center">
+         <h2 class="text-4xl font-bold mb-8 text-pink-500">Planes de Precios</h2>
+         <p class="mb-10 text-xl">
+            Elige el plan que mejor se adapte a tu tipo de torneo o comunidad
+         </p>
+
+         <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+            <!-- Plan Gratis -->
+            <div class="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col flex-1 min-w-[260px]">
+               <h3 class="text-2xl font-semibold mb-4">Gratis</h3>
+               <p class="text-4xl font-bold mb-6">S/ 0</p>
+               <ul class="text-left space-y-3 mb-6">
+                  <li>✅ Torneos ilimitados</li>
+                  <li>✅ Formatos básicos (eliminación, grupos)</li>
+                  <li>✅ Plantillas por juego (limitadas)</li>
+                  <li>✅ Registro de jugadores</li>
+                  <li>❌ Personalización avanzada</li>
+                  <li>❌ Integración de pagos</li>
+                  <li>❌ Soporte prioritario</li>
+               </ul>
+               <a
+                  class=" bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-xl cursor-pointer"
+               >
+                  Comenzar
+               </a>
+            </div>
+
+            <!-- Plan Pro -->
+            <div
+               class="bg-gray-800 border-2 border-indigo-500 rounded-2xl p-8 shadow-2xl flex flex-col flex-1 min-w-[260px] transform md:scale-105"
+            >
+               <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+               <p class="text-4xl font-bold mb-6">
+                  S/ 29<span class="text-sm text-gray-400"> /mes</span>
+               </p>
+               <ul class="text-left space-y-3 mb-6">
+                  <li>✅ Todo lo del plan Gratis</li>
+                  <li>✅ Personalización completa</li>
+                  <li>✅ Soporte prioritario</li>
+                  <li>✅ Estadísticas y analíticas</li>
+                  <li>✅ Enlaces embebibles para stream</li>
+                  <li>❌ Módulos patrocinados</li>
+                  <li>❌ API avanzada</li>
+               </ul>
+               <a
+                  class="mt-auto bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-xl cursor-pointer"
+               >
+                  Suscribirme
+               </a>
+            </div>
+
+            <!-- Plan Express -->
+            <div class="bg-gray-900 rounded-2xl p-8 shadow-lg flex flex-col flex-1 min-w-[260px]">
+               <h3 class="text-2xl font-semibold mb-4">Express</h3>
+               <p class="text-4xl font-bold mb-6">S/ 5<span class="text-sm text-gray-400"> /día</span>
+               </p>
+               <ul class="text-left space-y-3 mb-6">
+                  <li>✅ Todo lo del plan Gratis</li>
+                  <li>✅ Personalización básica</li>
+                  <li>✅ Estadísticas del torneo</li>
+                  <li>✅ Soporte rápido durante el evento</li>
+                  <li>❌ Integración de pagos</li>
+                  <li>❌ Branding personalizado</li>
+                  <li>❌ Consultoría dedicada</li>
+               </ul>
+               <a
+                  class="mt-auto bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-xl cursor-pointer"
+               >
+                  Probar Express
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+</Layout>

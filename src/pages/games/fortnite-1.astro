@@ -3,19 +3,71 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-<div class="relative flex min-h-screen items-center justify-center text-white">
-   <img src="/bg/fortnite-back.webp" alt="Background Fortnite" class="absolute inset-0 object-cover w-full h-full">
-   <section class="relative h-[800px] w-[900px] rounded-4xl bg-cyan-950/90  flex flex-col gap-y-5 items-center justify-center">
-      <img src="/logos/lol-icon.webp" alt="Fortnite Logo" class="h-48 w-48 top-0">
-      <h1 class=" text-6xl text-pink-500 font-bold">Crea tu torneo</h1>
-      <h2 class="text-4xl text-white font-bold">Plantillas predefinidas</h2>
-      <hr>
-      <ul class="flex flex-col w-3/4 gap-4 text-center">
-         <a href="/games/fortnite-2"><li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2 hover:bg-slate-600">Plantilla 1</li></a>
-         <a href="#"><li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2 hover:bg-slate-600">Plantilla 2</li></a>
-         <a href="#"><li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2 hover:bg-slate-600">Plantilla 3</li></a>
-         <a href="#"><li class="w-full rounded-full bg-slate-600/60 text-3xl py-3 mx-2 hover:bg-slate-600">Plantilla 4</li></a>
-      </ul>
-   </section>
-</div>
+   <div
+      class="relative flex min-h-screen items-center justify-center text-white top-0"
+   >
+      <img
+         src="/bg/fortnite-bg.jpg"
+         alt="Background Fortnite"
+         class="absolute inset-0 object-cover w-full h-full"
+      />
+      <section
+         class="relative h-[600px] w-[700px] rounded-4xl bg-slate-950/90 flex flex-col gap-y-5 items-center justify-center"
+      >
+         <img
+            src="/logos/lol-icon.webp"
+            alt="Fortnite Logo"
+            class="h-36 w-36 top-0"
+         />
+         <h1 class="text-4xl text-pink-500 font-bold">Crea tu torneo</h1>
+         <h2 class="text-xl text-white font-bold">Plantillas predefinidas</h2>
+         <hr />
+         <ul class="flex flex-col w-3/4 gap-y-2 text-center">
+            <a
+               href="/games/fortnite-2"
+               class="w-full rounded-full bg-slate-600/60 text-xl py-2 mx-2 hover:bg-slate-600 flex flex-row items-center justify-center gap-x-2 h-12"
+            >
+               <img
+                  src="/logos/fortnite-icon.png"
+                  alt="Fortnite Icon"
+                  class="h-14 w-14"
+               />
+               <span>Fortnite World Cup 2024</span>
+            </a>
+            <a
+               href="/games/fortnite-2"
+               class="w-full rounded-full bg-slate-600/60 text-xl py-2 mx-2 hover:bg-slate-600 flex flex-row items-center justify-center gap-x-2 h-12"
+            >
+               <img
+                  src="/logos/fortnite-icon.png"
+                  alt="Fortnite Icon"
+                  class="h-14 w-14"
+               />
+               <span>Fortnite World Cup 2023</span>
+            </a>
+            <a
+               href="/games/fortnite-2"
+               class="w-full rounded-full bg-slate-600/60 text-xl py-2 mx-2 hover:bg-slate-600 flex flex-row items-center justify-center gap-x-2 h-12"
+            >
+               <img
+                  src="/logos/fortnite-icon.png"
+                  alt="Fortnite Icon"
+                  class="h-14 w-14"
+               />
+               <span>Fortnite World Cup 2022</span>
+            </a>
+            <a
+               href="/games/fortnite-2"
+               class="w-full rounded-full bg-slate-600/60 text-xl py-2 mx-2 hover:bg-slate-600 flex flex-row items-center justify-center gap-x-2 h-12 mt-4"
+            >
+               <img
+                  src="/favicon.svg"
+                  alt="Fortnite Icon"
+                  class="h-6 w-6"
+               />
+               <span>Personalizado</span>
+            </a>
+         </ul>
+      </section>
+   </div>
 </Layout>
